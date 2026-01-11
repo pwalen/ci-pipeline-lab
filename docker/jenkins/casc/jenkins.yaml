@@ -1,0 +1,2 @@
+jenkins:
+  systemMessage: 'Jenkins configured by Configuration as Code'
