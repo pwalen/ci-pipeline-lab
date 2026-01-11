@@ -8,6 +8,6 @@ RUN jenkins-plugin-cli --plugin-file /usr/share/jenkins/ref/plugins.txt
 COPY casc/ /usr/share/jenkins/ref/casc/
 
 # Tell Jenkins where CASC config lives
-ENV CASC_JENKINS_CONFIG=/usr/share/jenkins/ref/casc
+ENV CASC_JENKINS_CONFIG=/usr/share/jenkins/ref/casc/jenkins.yaml
 
 EXPOSE 8080
