@@ -1,0 +1,29 @@
+projects:
+  sample_apps:
+    metadata:
+      display_name: 'Android Testing Samples - CI Reference'
+      code_owner: 'Android Open Source Project'
+      ci_owner: 'ci-pipeline-lab'
+
+    source:
+      repository: 'https://github.com/android/testing-samples'
+      default_branch: 'main'
+
+    build:
+      type: 'debug'
+      flavors:
+        - default
+
+    tests:
+      enabled: true
+      types:
+        - 'unit'
+        - 'instrumentation'
+
+    device_profiles:
+      - 'phone_api33_x86'
+      - 'phone_api30_x86'
+
+    constraints:
+      max_build_minutes: 20
+      max_test_minutes: 30
