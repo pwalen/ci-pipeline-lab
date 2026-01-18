@@ -213,3 +213,4 @@ __marimo__/
 .idea/
 ci-pipeline-lab.iml
 /out/
+jenkins_jobs.ini

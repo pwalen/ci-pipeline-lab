@@ -1,0 +1,67 @@
+# =========================
+# DEFAULTS
+# =========================
+- defaults:
+    name: global-defaults
+    description: 'CI PIPELINE LAB – minimal pipeline jobs'
+    project-type: pipeline
+    concurrent: true
+
+# =========================
+# BROWSER JOB
+# =========================
+- job:
+    name: Generic-ci-browser
+    defaults: global-defaults
+    parameters:
+      - string:
+          name: PROJECT
+          default: Generic
+      - string:
+          name: PLATFORM
+          default: browser
+      - string:
+          name: NODE_LABEL
+          default: linux_x86_chrome
+      - bool:
+          name: REMOTE_CONNECTION
+          default: false
+    pipeline-scm:
+      scm:
+        - git:
+            url: https://example.com/ci-pipeline-lab.git
+            branches:
+              - main
+      script-path: jenkins/pipelines/Jenkinsfile.browser
+      lightweight-checkout: true
+
+# =========================
+# PHONE JOB (API33)
+# =========================
+- job:
+    name: Generic-ci-phone-api33
+    defaults: global-defaults
+    parameters:
+      - string:
+          name: PROJECT
+          default: Generic
+      - string:
+          name: PLATFORM
+          default: phone
+      - string:
+          name: DEVICE
+          default: api33
+      - string:
+          name: NODE_LABEL
+          default: phone_api33_x86
+      - bool:
+          name: REMOTE_CONNECTION
+          default: true
+    pipeline-scm:
+      scm:
+        - git:
+            url: https://example.com/ci-pipeline-lab.git
+            branches:
+              - main
+      script-path: jenkins/pipelines/Jenkinsfile.phone
+      lightweight-checkout: true

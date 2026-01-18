@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+set -e
+
+echo "PROJECT=$PROJECT"
+echo "PLATFORM=$PLATFORM"
+echo "DEVICE=$DEVICE"
+echo "NODE_LABEL=$NODE_LABEL"
+echo "REMOTE_CONNECTION=$REMOTE_CONNECTION"

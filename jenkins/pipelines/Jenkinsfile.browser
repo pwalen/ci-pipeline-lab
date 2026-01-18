@@ -1,0 +1,12 @@
+pipeline {
+    agent{
+        label "$NODE_LABEL"
+    }
+    stages {
+        stage('Run') {
+            steps {
+                sh './runner.sh'
+            }
+        }
+    }
+}
