@@ -209,3 +209,7 @@ __marimo__/
 
 # Others
 .vscode/
+
+.idea/
+ci-pipeline-lab.iml
+/out/
