@@ -3,7 +3,7 @@
 # =========================
 - defaults:
     name: global-defaults
-    description: 'CI PIPELINE LAB – minimal pipeline jobs'
+    description: 'CI PIPELINE LAB - minimal pipeline jobs'
     project-type: pipeline
     concurrent: true
 

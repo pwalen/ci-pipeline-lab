@@ -214,3 +214,4 @@ __marimo__/
 ci-pipeline-lab.iml
 /out/
 jenkins_jobs.ini
+.github/copilot-instructions.md
